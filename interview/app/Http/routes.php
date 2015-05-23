@@ -24,3 +24,9 @@ Route::get('books', function()
 {
     return View::make('books');
 });
+
+Route::post('books', function()
+{
+    $author = Input::get('author');
+    return View::make('books');
+});

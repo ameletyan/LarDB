@@ -1,8 +1,7 @@
 <html>
+	<head>BOOKS</head>
     <body>
-
-        <h1>BOOKS</h1>
-        
+    	@yield('sidebar')
         @yield('content')
     </body>
 </html>
