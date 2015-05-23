@@ -7,7 +7,7 @@
 			    text-align:center;
 			    padding:5px;
 			}
-			#nav {
+			#drop {
 			    line-height:30px;
 			    background-color:#eeeeee;
 			    height:100%;
@@ -15,13 +15,16 @@
 			    float:left;
 			    padding:10px;	      
 			}
+			#p {
+				font-family: "Helvetica";
+			}
 		</style>
 	</head>
     <body>
     	<div id="header">
     		<h1>BOOKS</h1>
     	</div>
-        <div id="nav">
+        <div id="drop">
         	<br><?php
 
 				$username = "artm95";
@@ -101,20 +104,18 @@
 
 			//display the book title then the text
 			$max = count($books);
-			// for ($i = 0; $i < $max; $i = $i + 1) {
-			// 	echo $books[$i];
-			// 	echo $texts[$i];
-			// }
 
 			//close the connection
 			mysqli_close($link);
 
 		?>
-        <h2>{{ $authors[$author-1] }}</h2>
-        @for ($i = 0; $i < $max; $i++)
-        	<h3>{{ $books[$i] }}</h3>
-        	<p>{{ $texts[$i] }}</p>
-        @endfor
+		<div id="p">
+	        <h2>{{ $authors[$author-1] }}</h2>
+	        @for ($i = 0; $i < $max; $i++)
+	        	<h3>{{ $books[$i] }}</h3>
+	        	<p>{{ $texts[$i] }}</p>
+	        @endfor
+    	</div>
 
     </body>
 </html>
