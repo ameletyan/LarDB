@@ -1,4 +1,5 @@
 <html>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<head>
 		<style>
 			#header {
@@ -25,7 +26,8 @@
     		<h1>BOOKS</h1>
     	</div>
         <div id="drop">
-        	<br><?php
+        	<br>
+        	<?php
 
 				$username = "artm95";
 				$password = "1022";
@@ -56,11 +58,10 @@
 				//close the connection
 				mysqli_close($link);
 
-			?><br>
+			?>
+			<br>
         </div>
       	<?php
-			// the code below is a little off, make sure to check over it
-			// the implementation of the above code will not have the same effect as the code below
 
 			$username = "artm95";
 			$password = "1022";
@@ -109,6 +110,8 @@
 			mysqli_close($link);
 
 		?>
+
+		<!-- present the data from the database -->
 		<div id="p">
 	        <h2>{{ $authors[$author-1] }}</h2>
 	        @for ($i = 0; $i < $max; $i++)
