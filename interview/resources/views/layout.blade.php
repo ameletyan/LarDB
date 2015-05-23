@@ -1,5 +1,5 @@
 <html>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 	<head>
 		<style>
 			#header {
@@ -105,7 +105,7 @@
 
 			//display the book title then the text
 			$max = count($books);
-
+			
 			//close the connection
 			mysqli_close($link);
 
@@ -115,8 +115,8 @@
 		<div id="p">
 	        <h2>{{ $authors[$author-1] }}</h2>
 	        @for ($i = 0; $i < $max; $i++)
-	        	<h3>{{ $books[$i] }}</h3>
-	        	<p>{{ $texts[$i] }}</p>
+	        	<h3>{{ utf8_encode($books[$i]) }}</h3>
+	        	<p>{{ utf8_encode($texts[$i]) }}</p>
 	        @endfor
     	</div>
 
